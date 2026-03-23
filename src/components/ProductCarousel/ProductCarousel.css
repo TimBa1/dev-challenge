@@ -1,0 +1,130 @@
+.carousel {
+  position: relative;
+  max-width: min(1600px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 56px 0 52px;
+  background: #fff;
+}
+
+.carousel__title {
+  margin-bottom: 28px;
+  text-align: center;
+  font-family: var(--font-script);
+  font-size: clamp(32px, 8vw, 72px);
+  font-weight: 400;
+  color: #101010;
+  line-height: 1;
+}
+
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 12px) / 2);
+  gap: 12px;
+  overflow: hidden;
+  padding: 0 12px;
+}
+
+.carousel__item {
+  min-width: 0;
+}
+
+.carousel__nav {
+  position: absolute;
+  top: 58%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: #9b9b9b;
+  transform: translateY(-50%);
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.carousel__nav:hover {
+  color: #5e5e5e;
+}
+
+.carousel__nav svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carousel__nav--prev {
+  left: 2px;
+}
+
+.carousel__nav--next {
+  right: 2px;
+}
+
+.carousel--compact .carousel__title {
+  font-size: clamp(30px, 4vw, 48px);
+  margin-bottom: 28px;
+}
+
+.carousel--compact .carousel__track {
+  grid-auto-columns: calc((100% - 16px) / 2);
+}
+
+.carousel--compact .product-card__image {
+  aspect-ratio: 4 / 5;
+}
+
+.carousel--compact .product-card__title {
+  font-size: clamp(17px, 1.8vw, 21px);
+}
+
+.carousel--compact .product-card__price {
+  font-size: clamp(20px, 2vw, 28px);
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    max-width: min(1720px, calc(100% - 48px));
+    padding: 86px 0 80px;
+  }
+
+  .carousel__title {
+    margin-bottom: 54px;
+    font-size: clamp(42px, 5vw, 72px);
+  }
+
+  .carousel__track {
+    grid-auto-columns: calc((100% - 72px) / 4);
+    gap: 24px;
+    padding: 0 72px;
+  }
+
+  .carousel__nav--prev {
+    left: 12px;
+  }
+
+  .carousel__nav--next {
+    right: 12px;
+  }
+
+  .carousel__nav {
+    width: 52px;
+    height: 52px;
+    top: 56%;
+  }
+
+  .carousel__nav svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .carousel--compact .carousel__track {
+    grid-auto-columns: calc((100% - 48px) / 3);
+  }
+}

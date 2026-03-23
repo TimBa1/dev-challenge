@@ -127,7 +127,7 @@ function App() {
         ))}
       </div>
 
-      <ProductCarousel title="New Arrivals" products={products} />
+      <ProductCarousel title="New Arrivals" products={products} variant="default" />
 
       <section className="promo-banner" aria-label="Our Favorite Tees">
         <img
